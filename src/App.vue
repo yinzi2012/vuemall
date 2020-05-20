@@ -9,6 +9,7 @@
 
 <script>
   import axios from 'axios'
+  import {getHomeData} from './network/home'
   export default {
     methods: {
       login() {
@@ -40,11 +41,14 @@
       },
 
       multidata() {
-        axios.get("/api/home/multidata").then(response => {
-          if (response.data) {
-            console.log(response.data)
-
-          }
+        // axios.get("/api/home/multidata").then(response => {
+        //   if (response.data) {
+        //     console.log(response.data)
+        //   }
+        // })
+        getHomeData({url:"/api/home/datas"}).then(res=>{
+          if(res.data)
+            console.log(res.data)
         })
       },
 

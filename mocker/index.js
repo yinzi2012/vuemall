@@ -5,16 +5,17 @@ const proxy = {
         success: appData.login.success,
         message: appData.login.message
     },
-    'GET /api/home/multidata':{
-        data:appData.multidata.data,
-        success:appData.multidata.success,
-        returnCode:appData.multidata.returnCode
+    'GET /api/home/datas':{
+
+        data:appData.datas.data,
+        success:appData.datas.success,
+        returnCode:appData.datas.returnCode
     },
     'GET /api/list': [{
-        id: 1,
-        username: 'kenny',
-        sex: 6
-    },
+            id: 1,
+            username: 'kenny',
+            sex: 6
+        },
         {
             id: 2,
             username: 'kenny',
